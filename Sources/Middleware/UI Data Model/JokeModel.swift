@@ -9,6 +9,6 @@ import Foundation
 
 public struct JokeModel
 {
-    let createdAt: String
-    let value: String
+    public let createdAt: String
+    public let value: String
 }
