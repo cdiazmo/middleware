@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NetworkProtocol
+public protocol NetworkProtocol
 {
     func sendRequest<T: Decodable>(endpoint: Endpoint, responseModel: T.Type) async -> Result<T, RequestError>
 }

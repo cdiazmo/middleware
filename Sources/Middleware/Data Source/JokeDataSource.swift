@@ -16,7 +16,7 @@ public class JokeDataSource
 {
     private let networkProvider: NetworkProtocol
     
-    init(networkProvider: NetworkProtocol)
+    public init(networkProvider: NetworkProtocol)
     {
         self.networkProvider = networkProvider
     }
