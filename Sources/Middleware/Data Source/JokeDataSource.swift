@@ -12,7 +12,7 @@ protocol JokeDataSourceProtocol
     func getData() async
 }
 
-class JokeDataSource
+public class JokeDataSource
 {
     private let networkProvider: NetworkProtocol
     
