@@ -5,13 +5,18 @@
 //  Created by Carlos Diaz on 9/7/22.
 //
 
-//class JokeEndpoint: Endpoint
-//{
-//    var scheme: String {
-//        return "https"
-//    }
-//
-//    var host: String {
-//        return "api.chucknorris.io"
-//    }
-//}
+public class JokeEndpoint: Endpoint
+{
+    public var header: [String : String]?
+    
+    public var body: [String : String]?
+    
+    public var url: String {
+        return "https://api.chucknorris.io/jokes/random"
+    }
+    
+    public var method: RequestMethod
+    {
+        return .get
+    }
+}

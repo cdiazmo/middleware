@@ -7,9 +7,9 @@
 
 import Foundation
 
-protocol JokeDataSourceProtocol
+public protocol JokeDataSourceProtocol
 {
-    func getData() async
+    func getData() async -> JokeModel?
 }
 
 public class JokeDataSource
@@ -24,7 +24,15 @@ public class JokeDataSource
 
 extension JokeDataSource : JokeDataSourceProtocol
 {
-    func getData() async {
-//        let response = async networkProvider.sendRequest(endpoint: JokeEndpoint(), responseModel: JokeDataModel.self)
+    public func getData() async -> JokeModel? {
+        let result = await networkProvider.sendRequest(endpoint: JokeEndpoint(), responseModel: JokeDataModel.self)
+        
+        switch result
+        {
+        case .success(let data):
+            return JokeModel(createdAt: data.createdAt, value: data.value)
+        case .failure:
+            return nil
+        }
     }
 }
