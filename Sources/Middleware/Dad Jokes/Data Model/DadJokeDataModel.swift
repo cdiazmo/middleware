@@ -10,7 +10,7 @@ import Foundation
 // MARK: - JokeDataModel
 class DadJokeDataModel: Codable {
     let id: String
-    let status: String
+    let status: Int
     let joke: String
 
     enum CodingKeys: String, CodingKey {
