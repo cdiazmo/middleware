@@ -19,7 +19,7 @@ class DadJokeDataModel: Codable {
         case joke
     }
 
-    init(id: String, status: String, joke: String) {
+    init(id: String, status: Int, joke: String) {
         self.id = id
         self.status = status
         self.joke = joke
