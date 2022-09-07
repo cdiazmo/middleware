@@ -5,7 +5,7 @@
 //  Created by Carlos Diaz on 9/7/22.
 //
 
-publicenum RequestMethod: String {
+public enum RequestMethod: String {
     case delete = "DELETE"
     case get = "GET"
     case patch = "PATCH"
