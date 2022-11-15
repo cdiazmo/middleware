@@ -10,4 +10,6 @@ import Foundation
 public protocol NetworkProtocol
 {
     func sendRequest<T: Decodable>(endpoint: Endpoint, responseModel: T.Type) async -> Result<T, RequestError>
+    func sendRequest(endpoint: Endpoint) async -> Result<[AnyHashable: Any], Error>
+
 }

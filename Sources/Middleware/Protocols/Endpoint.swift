@@ -9,8 +9,8 @@ import Foundation
 
 public protocol Endpoint
 {
-    var url: String { get }
+    var url: URL? { get }
     var method: RequestMethod { get }
-    var header: [String: String]? { get }
-    var body: [String: String]? { get }
+    var header: [String: Any]? { get }
+    var body: [String: Any]? { get }
 }
